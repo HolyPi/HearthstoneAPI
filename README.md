@@ -1,0 +1,1 @@
+NPM Library: https://www.npmjs.com/package/@holyari/hearthstone-api
