@@ -1,0 +1,93 @@
+
+body {
+    height: 1000px;
+    font-family: AUTHENTICSans-60, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+    background: rgb(237,242,248);
+background: linear-gradient(180deg, rgba(237,242,248,1) 0%, rgba(162,145,128,1) 100%);
+}
+
+
+
+.side-nav {
+    float: right;
+    
+}
+
+.back-img {
+    opacity: 0.2;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-left: 700px;
+    
+    
+}
+
+.container2 {
+    margin-left: 500px;
+  
+}
+
+#nameCard {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#cardSet {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#text {
+    font-weight: normal;
+}
+.textcenter {
+    padding: 30px 30px 30px 30px;
+  
+}
+
+#img {
+    border: 1px solid rgb(48, 47, 47);
+    filter: drop-shadow(2px 4px 8px #00000085);
+    
+}
+#name {
+
+    width: 50%;
+    padding: 12px 24px;
+    transition: all 250ms ease-in-out;
+    font-size: 18px;
+    line-height: 18px;
+    color: #948568;
+    margin-bottom: 30px;
+}
+
+#name:hover {
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
+    transition: all 400ms ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #181F20;
+    padding: 17px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 400ms ease-in-out;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+button:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 400ms ease-in-out;
+}

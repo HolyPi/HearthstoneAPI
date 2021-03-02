@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hearthstone</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+        <body>
+          <img class="back-img" src="hearth.png">
+          <div class="side-nav">
+            <div class="container">
+            <form id="form">
+                <input 
+                  id="name" 
+                  type="text" 
+                  placeholder="Card Name"
+                  title="Please Enter a card name">
+                <button type="submit">Search</button>
+              </div>
+            </div>
+            <div class="container2">
+              <div class="textcenter">
+              <h1 id="nameCard">
+              </h1>
+              <h2 id="cardSet"></h2>
+              <h3 id="type"></h3>
+              <img id="img">
+              <h2 id="text"></h2>
+              <h2 id="race"></h2>
+            </div>
+            </div>
+
+
+            <script type='module'>
+                import getCard from './index.js'
+
+                const nameEl = document.getElementById('nameCard')
+                const setEl = document.getElementById('cardSet')
+                const typeEl = document.getElementById('type')
+                const imgEl = document.getElementById('img')
+                const textEl = document.getElementById('text')
+                const raceEl = document.getElementById('race')
+                const formEl = document.getElementById('form')
+                const nameInput = document.getElementById('name')
+
+                formEl.addEventListener('submit', (e) => {
+                    e.preventDefault()
+                    const apikey = "aed6ea0b86msh9c78499d532409fp158ca5jsnd851dd39c29e"
+                    const name = nameInput.value
+
+                    getCard(apikey, name)
+                    .then((cards) => {
+                      nameEl.innerHTML = cards.name
+                      setEl.innerHTML = 'Card Set:' + ' ' + cards.cardSet
+                      typeEl.innerHTML = 'Card type' + ' ' + cards.type
+                      imgEl.src = cards.img
+                      textEl.innerHTML = 'Card text:' + ' ' + cards.text
+                      raceEl.innerHTML = 'Race' + ' ' + cards.race 
+                    }).catch(err => console.log(err.message))
+                })
+
+
+            </script>
+
+        </body>
+   
+</html>
